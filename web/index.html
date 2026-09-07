@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Play a simple, accessible Rock–Paper–Scissors game in your browser."
+    />
+    <title>Rock–Paper–Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="game" aria-labelledby="game-title">
+      <p class="eyebrow">Browser game</p>
+      <h1 id="game-title">Rock–Paper–Scissors</h1>
+      <p class="instructions">Choose a move. The computer will choose at the same time.</p>
+
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div><strong id="player-score">0</strong><span>You</span></div>
+        <div><strong id="computer-score">0</strong><span>Computer</span></div>
+        <div><strong id="draw-score">0</strong><span>Draws</span></div>
+      </section>
+
+      <div class="choices" aria-label="Choose your move">
+        <button type="button" data-choice="rock"><span aria-hidden="true">●</span> Rock</button>
+        <button type="button" data-choice="paper"><span aria-hidden="true">▰</span> Paper</button>
+        <button type="button" data-choice="scissors"><span aria-hidden="true">✂</span> Scissors</button>
+      </div>
+
+      <p id="result" class="result" role="status" aria-live="polite">
+        Choose Rock, Paper, or Scissors to begin.
+      </p>
+      <p id="round" class="round">Round 1</p>
+      <button id="reset" class="reset" type="button">Reset scores</button>
+    </main>
+  </body>
+</html>
